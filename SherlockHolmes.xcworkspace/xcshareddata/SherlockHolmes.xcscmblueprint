@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E2AD0EFD5AA73D51F1CCF94CB7C05A1CF92AF11A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D5C2A73F16AA4D561692DDBC0866365293DAE9E5" : 0,
+    "E2AD0EFD5AA73D51F1CCF94CB7C05A1CF92AF11A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DA92EB16-A3A8-4DC7-9166-E5358E2B4BC7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D5C2A73F16AA4D561692DDBC0866365293DAE9E5" : "",
+    "E2AD0EFD5AA73D51F1CCF94CB7C05A1CF92AF11A" : "SherlockHolmes\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SherlockHolmes",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SherlockHolmes.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:folkes\/marilyn-monroe.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D5C2A73F16AA4D561692DDBC0866365293DAE9E5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/brasilsincero\/sherlock-holmes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2AD0EFD5AA73D51F1CCF94CB7C05A1CF92AF11A"
+    }
+  ]
+}
