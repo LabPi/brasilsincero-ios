@@ -1,1 +1,28 @@
+PODS:
+  - Alamofire (3.3.1)
+  - Bolts/Tasks (1.7.0)
+  - ExpandingMenu (0.1.3)
+  - Former (1.3.0)
+  - PageMenu (1.2.9)
+  - Parse (1.13.0):
+    - Bolts/Tasks (~> 1.6)
+  - RESideMenu (4.0.7)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.3)
+  - ExpandingMenu (~> 0.1)
+  - Former
+  - PageMenu
+  - Parse
+  - RESideMenu (~> 4.0.7)
+
+SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  ExpandingMenu: f608c37679bcfe59fd05145b42bcacbe3aa28db5
+  Former: 7380ef3b9bdb3bf43d9f0fe99e369987d3068705
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  Parse: f51c24d2feb412e4b2d6cc73d37cb24e8d0089bc
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+
 COCOAPODS: 0.39.0
