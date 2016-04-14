@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AgreementsTableView: UITableView {
+class ProgramsTableView: UITableView {
 
     override func drawRect(rect: CGRect) {
         let image: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))

@@ -9,5 +9,6 @@
 import UIKit
 
 protocol RankingProtocol {
-    <#requirements#>
+    
+    func updateListWithRanking(rankingType: Int)
 }
