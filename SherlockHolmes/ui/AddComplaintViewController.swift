@@ -6,8 +6,13 @@
 //  Copyright © 2016 BrasilSincero. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class AddComplaintViewController: UIViewController {
-
+final class AddComplaintViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = "DENUNCIAR"
+    }
 }
