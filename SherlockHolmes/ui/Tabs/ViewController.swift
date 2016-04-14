@@ -85,15 +85,15 @@ class ViewController: UIViewController, UISearchBarDelegate, CAPSPageMenuDelegat
             switch index {
             case 0:
                 searchController2 = searchBar.text
+                self.searchBar.text = searchController1
                 break
             case 1:
                 searchController1 = searchBar.text
+                self.searchBar.text = searchController2
                 break
             default:
                 break
             }
-            
-            clearSearch()
         }
     }
     
@@ -134,29 +134,36 @@ class ViewController: UIViewController, UISearchBarDelegate, CAPSPageMenuDelegat
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.closeSearchBar()
+        
+        searchController1 = ""
+        searchController2 = ""
+        
+        self.controller1.updateList("")
+        self.controller2.updateList("")
+    }
+    
+    func closeSearchBar() {
         
         UIView.animateWithDuration(0.5, animations: {
             self.searchBar.alpha = 0.0
         }) { (finish: Bool) in
             self.navigationItem.titleView = self.titleView
             self.navigationItem.leftBarButtonItem = self.menuBarButton
-            
             self.createSearchBarButtonItem()
-            
             self.searchBar.alpha = 0.0;
             
-            
             UIView.animateWithDuration(0.5, animations: {
-                //                self.searchButton.alpha = 1.0
+                self.searchBar.alpha = 1.0
             })
         }
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        clearSearch()
+        getTextSearchForView()
     }
     
-    func clearSearch() {
+    func getTextSearchForView() {
         
         switch pagePosition {
         case 0:
@@ -191,7 +198,6 @@ class ViewController: UIViewController, UISearchBarDelegate, CAPSPageMenuDelegat
     }
     
     func showFilterView() {
-//        self.addChildViewController(self.filterViewController)
         self.navigationController?.view.addSubview(self.filterViewController.view)
     }
     
@@ -207,14 +213,10 @@ class ViewController: UIViewController, UISearchBarDelegate, CAPSPageMenuDelegat
         self.navigationItem.leftBarButtonItem = self.filterItem
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
-    }
-    
     //MARK: RANKING PROTOCOL
     func updateListWithRanking(rankingType: Int) {
         
-        if (searchBar != nil) { clearSearch() }
+        if (searchBar != nil) { getTextSearchForView() }
         
         switch pagePosition {
         case 0:
@@ -227,7 +229,9 @@ class ViewController: UIViewController, UISearchBarDelegate, CAPSPageMenuDelegat
         default:
             break
         }
-        
-        
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
     }
 }
