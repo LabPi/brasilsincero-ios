@@ -30,7 +30,6 @@ class ProgramsCell: UITableViewCell {
         lblLocal.text = String(format: "%@ / %@",
                                item["nm_municipio_proponente"] as! String,
                                item["uf_proponente"] as! String)
-
     }
     
     func fillAttributesWithTransfers(item: NSDictionary) {
@@ -40,6 +39,5 @@ class ProgramsCell: UITableViewCell {
         lblLocal.text = String(format: "%@ / %@",
                                item["nm_municipio_convenente"] as! String,
                                item["uf_convenente"] as! String)
-        
     }
 }

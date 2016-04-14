@@ -50,7 +50,6 @@ class ViewController: UIViewController, UISearchBarDelegate, CAPSPageMenuDelegat
     }
     
     //MARK: PAGE MENU
-    
     func buildTabBar() {
         let storyboard = UIStoryboard(name: Constants.STORYBOARD_NAME, bundle: nil)
         

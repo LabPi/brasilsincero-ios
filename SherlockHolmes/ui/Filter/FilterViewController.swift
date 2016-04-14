@@ -24,6 +24,10 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startAnimation()
+    }
+    
+    func startAnimation() {
         filterView.alpha = 0
         
         let transition: CATransition! = CATransition()
@@ -36,6 +40,7 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         filterView.alpha = 1.0
     }
     
+    //MARK: TEXTFIELD DELEGATE
     func textFieldDidBeginEditing(textField: UITextField) {
         switch textField.tag {
         case 1:
@@ -56,6 +61,7 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
+    //MARK: PICKER VIEW DATASOURCE
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -69,6 +75,7 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         switch currentTextField {
         case 1:
             region.text = currentArray[row] as? String
@@ -79,21 +86,14 @@ class FilterViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
-
+    //MARK: ACTIONS
     @IBAction func applyFilter(sender: AnyObject) {
         
-        let transition: CATransition! = CATransition()
-        transition.duration = 0.5;
-        transition.type = kCATransitionPush;
-        transition.subtype = kCATransitionFromLeft;
-        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        
-        filterView.layer.addAnimation(transition, forKey: nil)
-        self.view.alpha = 0
-        self.view.removeFromSuperview()
+        self.closeFilterView()
     }
     
     @IBAction func closeFilterView() {
+        
         let transition: CATransition! = CATransition()
         transition.duration = 0.5;
         transition.type = kCATransitionPush;

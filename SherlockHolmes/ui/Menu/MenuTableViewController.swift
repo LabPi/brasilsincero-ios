@@ -18,11 +18,9 @@ class MenuTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : MenuCell = tableView.dequeueReusableCellWithIdentifier(Constants.MENU_CELL) as! MenuCell
@@ -55,12 +53,11 @@ class MenuTableViewController: UITableViewController {
             break;
         case 3:
             let refreshAlert = UIAlertController(title: "Em Breve", message: "Esta funcionalidade será desenvolvida na próxima versão.", preferredStyle: UIAlertControllerStyle.Alert)
-            
             refreshAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
             }))
         
             presentViewController(refreshAlert, animated: true, completion: nil)
-            
+
             break;
         default:
             break;

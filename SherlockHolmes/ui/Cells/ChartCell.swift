@@ -13,13 +13,11 @@ class ChartCell: UITableViewCell, ChartViewDelegate {
 
     @IBOutlet var chart: PieChartView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     func buildChart(regions: NSArray, states: NSArray) {
-        
         let unitsSold = [20.0, 30.0, 15.0, 15.0, 10.0]
         setChart(regions as! [String], values: unitsSold)
     }
